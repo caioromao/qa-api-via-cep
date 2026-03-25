@@ -43,6 +43,7 @@ E o campo "erro" deve ser verdadeiro
 Caso de Teste 4 – Fluxo de exceção (input inválido)
 
 Cenário: Buscar CEP com formato inválido
+
 Dado que possuo um CEP em formato inválido "ABC12345"
 Quando eu realizar uma requisição GET para "/ws/ABC12345/json/"
 Então a API deve retornar erro (status code 400) ou comportamento de falha esperado
