@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "93beb46d-8424-4853-aecf-69af94778525",
-    "name": "ViaCEP API Tests",
+    "name": "ViaCEP API - Test Collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "47823799",
     "_collection_link": "https://go.postman.co/collection/47823799-93beb46d-8424-4853-aecf-69af94778525?source=collection_link"
