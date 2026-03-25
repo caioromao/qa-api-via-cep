@@ -21,6 +21,10 @@ Os cenários foram definidos considerando:
   - CEP inválido
   - Formato inválido
 
+## Execução dos Testes
+
+Os testes podem ser executados via Postman importando a collection presente no repositório.
+
 ## Collection Postman
 
 A collection com as requisições e testes automatizados está disponível no repositório.
