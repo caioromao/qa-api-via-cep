@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "93beb46d-8424-4853-aecf-69af94778525",
+    "name": "ViaCEP API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47823799",
+    "_collection_link": "https://go.postman.co/collection/47823799-93beb46d-8424-4853-aecf-69af94778525?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CEP válido sem hífen",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const response = pm.response.json();\r",
+              "\r",
+              "pm.test(\"CEP correto\", function () {\r",
+              "    pm.expect(response.cep).to.eql(\"74650-170\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Campos obrigatórios preenchidos\", function () {\r",
+              "    pm.expect(response.logradouro).to.not.be.empty;\r",
+              "    pm.expect(response.localidade).to.eql(\"Goiânia\");\r",
+              "    pm.expect(response.uf).to.eql(\"GO\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/74650170/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "74650170",
+            "json",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CEP válido com hífen",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const response = pm.response.json();\r",
+              "\r",
+              "pm.test(\"CEP correto\", function () {\r",
+              "    pm.expect(response.cep).to.eql(\"74003-010\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/74003-010/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "74003-010",
+            "json",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CEP inválido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "const response = pm.response.json();\r",
+              "\r",
+              "pm.test(\"Retorna erro\", function () {\r",
+              "    pm.expect(response.erro).to.be.true;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/00000000/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "00000000",
+            "json",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CEP formato inválido",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Resposta recebida\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/ABC12345/json/",
+          "protocol": "https",
+          "host": [
+            "viacep",
+            "com",
+            "br"
+          ],
+          "path": [
+            "ws",
+            "ABC12345",
+            "json",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
