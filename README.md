@@ -6,7 +6,14 @@ Validar o funcionamento da API ViaCEP através de cenários de testes funcionais
 ## API utilizada
 https://viacep.com.br/
 
-## Casos de teste
+## Estratégia de Teste
+
+Os cenários foram definidos considerando:
+- Caminho feliz (fluxo principal)
+- Variações de entrada (fluxo alternativo)
+- Tratamento de erro (fluxos de exceção)
+
+## Casos de Teste
 
 - Fluxo básico: CEP válido
 - Fluxo alternativo: CEP com e sem hífen
