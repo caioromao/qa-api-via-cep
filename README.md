@@ -25,6 +25,10 @@ Os cenários foram definidos considerando:
 
 Os testes podem ser executados via Postman importando a collection presente no repositório.
 
+## Evidências
+
+As evidências da execução dos testes estão disponíveis na pasta /evidencias.
+
 ## Collection Postman
 
 A collection com as requisições e testes automatizados está disponível no repositório.
