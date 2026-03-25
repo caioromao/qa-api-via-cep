@@ -13,8 +13,10 @@ Quando eu realizar uma requisição GET para "/ws/74650170/json/"
 Então a resposta deve ter status code 200
 E o campo "cep" deve ser "74650-170"
 E o campo "logradouro" deve estar preenchido
+E o campo "bairro" deve estar preenchido
 E o campo "localidade" deve ser "Goiânia"
 E o campo "uf" deve ser "GO"
+E o campo "ddd" deve ser "62"
 
 
 Caso de Teste 2 – Fluxo alternativo (positivo)
@@ -26,8 +28,10 @@ Quando eu realizar uma requisição GET para "/ws/74003-010/json/"
 Então a resposta deve ter status code 200
 E o campo "cep" deve ser "74003-010"
 E o campo "logradouro" deve estar preenchido
+E o campo "bairro" deve estar preenchido
 E o campo "localidade" deve ser "Goiânia"
 E o campo "uf" deve ser "GO"
+E o campo "ddd" deve ser "62"
 
 
 Caso de Teste 3 – Fluxo de exceção (negativo)
