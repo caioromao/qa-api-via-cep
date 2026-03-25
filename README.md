@@ -21,5 +21,9 @@ Os cenários foram definidos considerando:
   - CEP inválido
   - Formato inválido
 
+## Collection Postman
+
+A collection com as requisições e testes automatizados está disponível no repositório.
+
 ## Tecnologias
 - Gherkin
